@@ -23,10 +23,10 @@
                                     <color key="titleColor" red="0.84083477514463634" green="0.91121683329478542" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="startPressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pE9-zk-H86"/>
+                                    <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rzm-0M-4lq"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" verticalHuggingPriority="216" translatesAutoresizingMaskIntoConstraints="NO" id="OD2-2I-kDh">
+                            <view contentMode="scaleToFill" verticalHuggingPriority="216" restorationIdentifier="red" translatesAutoresizingMaskIntoConstraints="NO" id="OD2-2I-kDh">
                                 <rect key="frame" x="120" y="20" width="80" height="80"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -45,9 +45,6 @@
                                 <state key="normal" title="STOP">
                                     <color key="titleColor" red="0.84083477510000004" green="0.91121683330000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="stopPressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="awB-1F-BQv"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -79,10 +76,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="greenColorView" destination="YYl-hv-3sg" id="0ax-Ff-tYl"/>
-                        <outlet property="nextPressedButton" destination="upu-wt-mtD" id="Zgj-yO-oVn"/>
-                        <outlet property="redColorView" destination="OD2-2I-kDh" id="TYa-pm-eKq"/>
-                        <outlet property="yellowColorView" destination="MC0-w0-Zxk" id="z7b-pv-qFp"/>
+                        <outlet property="greenUIView" destination="YYl-hv-3sg" id="pcn-fo-Dia"/>
+                        <outlet property="redUIView" destination="OD2-2I-kDh" id="sG3-bc-gor"/>
+                        <outlet property="startButton" destination="upu-wt-mtD" id="Kfc-xj-Eo4"/>
+                        <outlet property="yellowUIView" destination="MC0-w0-Zxk" id="GRo-sL-9Om"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
