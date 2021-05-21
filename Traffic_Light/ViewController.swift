@@ -9,30 +9,70 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    enum  ColorLight {
+        case red,yellow,green
+    }
+    
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    
     @IBOutlet weak var redUIView: UIView!
     @IBOutlet weak var yellowUIView: UIView!
     @IBOutlet weak var greenUIView: UIView!
-    
-    var isFadeOn = true
+  
+    private var currentLight = ColorLight.red
+    private let lightIsOn: CGFloat = 1
+    private let lightIsOff: CGFloat = 0.3
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        redUIView.alpha = 0.3
-        yellowUIView.alpha = 0.3
-        greenUIView.alpha = 0.3
+        startButton.layer.cornerRadius = 10
+        stopButton.layer.cornerRadius = 10
+        
+        redUIView.alpha = lightIsOff
+        yellowUIView.alpha = lightIsOff
+        greenUIView.alpha = lightIsOff
         
     }
     
-    
-  
+    override func viewDidLayoutSubviews() {
+        redUIView.layer.cornerRadius = redUIView.frame.width / 2
+        yellowUIView.layer.cornerRadius = redUIView.frame.width / 2
+        greenUIView.layer.cornerRadius = redUIView.frame.width / 2
+    }
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
+        if startButton.currentTitle == "START" {
+            startButton.setTitle("NEXT", for: .normal)
+        }
         
-       
-        
+        switch currentLight {
+        case .red:
+            redUIView.alpha = lightIsOn
+            currentLight = .yellow
+            greenUIView.alpha = lightIsOff
+        case .yellow:
+            redUIView.alpha = lightIsOff
+            yellowUIView.alpha = lightIsOn
+            currentLight = .green
+        case .green:
+            currentLight = .red
+            yellowUIView.alpha = lightIsOff
+            greenUIView.alpha = lightIsOn
+        }
     }
+    
+    @IBAction func stopButtonTapped(_ sender: UIButton) {
+        startButton.setTitle("START", for: .normal)
+        
+        currentLight = .red
+        
+        redUIView.alpha = lightIsOff
+        yellowUIView.alpha = lightIsOff
+        greenUIView.alpha = lightIsOff
+    }
+    
 
 }

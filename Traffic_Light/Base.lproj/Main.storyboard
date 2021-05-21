@@ -45,6 +45,9 @@
                                 <state key="normal" title="STOP">
                                     <color key="titleColor" red="0.84083477510000004" green="0.91121683330000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="stopButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C4X-nf-ZBN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -79,6 +82,7 @@
                         <outlet property="greenUIView" destination="YYl-hv-3sg" id="pcn-fo-Dia"/>
                         <outlet property="redUIView" destination="OD2-2I-kDh" id="sG3-bc-gor"/>
                         <outlet property="startButton" destination="upu-wt-mtD" id="Kfc-xj-Eo4"/>
+                        <outlet property="stopButton" destination="8WB-w7-9tQ" id="xE2-zc-0BF"/>
                         <outlet property="yellowUIView" destination="MC0-w0-Zxk" id="GRo-sL-9Om"/>
                     </connections>
                 </viewController>
