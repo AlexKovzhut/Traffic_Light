@@ -19,28 +19,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var redUIView: UIView!
     @IBOutlet weak var yellowUIView: UIView!
     @IBOutlet weak var greenUIView: UIView!
-  
+    
     private var currentLight = ColorLight.red
     private let lightIsOn: CGFloat = 1
-    private let lightIsOff: CGFloat = 0.3
+    private let lightIsOff: CGFloat = 0.2
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        startButton.layer.cornerRadius = 10
-        stopButton.layer.cornerRadius = 10
+        startButton.layer.cornerRadius = 15
+        stopButton.layer.cornerRadius = 15
         
         redUIView.alpha = lightIsOff
         yellowUIView.alpha = lightIsOff
         greenUIView.alpha = lightIsOff
-        
     }
     
     override func viewDidLayoutSubviews() {
-        redUIView.layer.cornerRadius = redUIView.frame.width / 2
-        yellowUIView.layer.cornerRadius = redUIView.frame.width / 2
-        greenUIView.layer.cornerRadius = redUIView.frame.width / 2
+        redUIView.makeRounded()
+        yellowUIView.makeRounded()
+        greenUIView.makeRounded()
     }
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
@@ -73,6 +72,15 @@ class ViewController: UIViewController {
         yellowUIView.alpha = lightIsOff
         greenUIView.alpha = lightIsOff
     }
-    
+}
 
+extension UIView {
+        func makeRounded() {
+            self.layoutIfNeeded()
+            self.layer.cornerRadius = self.frame.size.width * 0.50
+            self.clipsToBounds = true
+            self.layer.borderWidth = 2
+            self.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            
+        }
 }

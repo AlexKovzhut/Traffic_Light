@@ -59,7 +59,7 @@
                             <constraint firstItem="YYl-hv-3sg" firstAttribute="top" secondItem="MC0-w0-Zxk" secondAttribute="bottom" constant="8" symbolic="YES" id="Gc9-rf-PmO"/>
                             <constraint firstItem="YYl-hv-3sg" firstAttribute="height" secondItem="OD2-2I-kDh" secondAttribute="height" id="GnI-Oz-e5F"/>
                             <constraint firstItem="upu-wt-mtD" firstAttribute="top" secondItem="YYl-hv-3sg" secondAttribute="bottom" constant="74" id="OJh-al-oqB"/>
-                            <constraint firstItem="upu-wt-mtD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="Oa5-qn-InI"/>
+                            <constraint firstItem="upu-wt-mtD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" multiplier="0.8" constant="131" id="Oa5-qn-InI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8WB-w7-9tQ" secondAttribute="bottom" constant="50" id="Plg-Sv-HEt"/>
                             <constraint firstItem="OD2-2I-kDh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="PtU-QW-B2O"/>
                             <constraint firstItem="8WB-w7-9tQ" firstAttribute="width" secondItem="upu-wt-mtD" secondAttribute="width" id="QdL-oA-E6g"/>
