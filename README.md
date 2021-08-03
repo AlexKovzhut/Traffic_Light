@@ -2,4 +2,4 @@
 
 ## *Traffic light color switch with start and stop buttons*
 
-![](Traffic_Light/Assets.xcassets/trafficlightpng.imageset/trafficlightpng.png){:height="50%" width="50%"}
+<img src="Traffic_Light/Assets.xcassets/trafficlightpng.imageset/trafficlightpng.png" width=40% height=40%>
